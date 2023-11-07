@@ -1,2 +1,15 @@
 # go-app
-CS 160 (UI Design and Development) Assignment. The go app allows users to convert distance to time and time to distance for walking, electric scooters, and electric skateboards and compare all modes of transportation. 
+
+![Go App Header](https://github.com/cj-hines/go-app/images/header.jpg?raw=true)
+
+## How to use:
+1. Select “go” which prompts you to enter a distance (or miles in the extra credit time to miles conversion).
+2. Select a valid mode of transportation to see time conversion.
+
+## Description
+The go app converts distance to time for all ten modes of transportation (extra credit) and allows the user to compare the results for all modes. Range limitations are taken into consideration as modes of transportation turn red and do not return the conversion if the distance is out of range (extra credit). The app uses design aspects (color, shape, animation) to improve the aesthetic and user experience (extra credit). The app is usable in both mobile and desktop forms (extra credit).
+
+## Documentation Video
+https://www.youtube.com/watch?v=SkcCq19W5Gs&feature=youtu.be
+![](https://github.com/cj-hines/go-app/images/sc1.jpg?raw=true)
+![](https://github.com/cj-hines/go-app/images/sc2.jpg?raw=true)
