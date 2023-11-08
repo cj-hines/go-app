@@ -1,6 +1,6 @@
 # go-app
 
-![Go App Header](https://github.com/cj-hines/go-app/blob/images/header.png?raw=true)
+![Go App Header](https://github.com/cj-hines/go-app/blob/main/images/header.png?raw=true)
 
 ## How to use:
 1. Select “go” which prompts you to enter a distance (or miles in the extra credit time to miles conversion).
@@ -11,5 +11,5 @@ The go app converts distance to time for all ten modes of transportation (extra 
 
 ## Documentation Video
 https://www.youtube.com/watch?v=SkcCq19W5Gs&feature=youtu.be
-![](https://github.com/cj-hines/go-app/blob/images/sc1.png?raw=true)
-![](https://github.com/cj-hines/go-app/blob/images/sc2.png?raw=true)
+![](https://github.com/cj-hines/go-app/blob/main/images/sc1.png?raw=true)
+![](https://github.com/cj-hines/go-app/blob/main/images/sc2.png?raw=true)
