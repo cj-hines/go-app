@@ -1,0 +1,191 @@
+<!-- Referenced: https://www.w3schools.com/html/html_responsive.asp-->
+<!-- Referenced: https://www.codingnepalweb.com/animated-search-box-javascript/-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <div class="search-box">
+    <input type="text" placeholder="Enter travel time in minutes">
+    <div class="search-icon">
+      go
+      <i class="fas fa-search"></i>
+    </div>
+<div class="cancel-icon">
+  <p id="doThis"></p>
+      <i class="fas fa-times"></i>
+    </div>
+<div class="search-data"> 
+</div>
+</div>
+
+<script>
+const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+
+searchBtn.onclick =()=>{
+    searchBox.classList.add("active");
+    searchBtn.classList.add("active");
+    searchInput.classList.add("active");
+    searchInput.focus();
+    if(searchInput.value != ""){
+        var values = searchInput.value;
+        searchData.classList.remove("active");
+        searchData.innerHTML = "You've got " + "<span style='font-weight: 500;'>" + values + "</span>" + " minutes. Please select a mode of transportation.";
+    }else{
+        searchData.textContent = "";
+    }
+}
+
+function Walking() { 
+  //3.1 MPH and 30 miles
+  if(searchInput.value != ""){
+        var values = searchInput.value;
+        var real = (3.1 * values) / 60;
+        searchData.classList.remove("active");
+        searchData.innerHTML = "You can travel " + real + " miles walking.";
+    } else{ 
+      searchData.textContent = "Click go :]";
+    }
+}
+function Boosted() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (18 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a Boosted Mini S Board.";
+    } else {
+      searchData.textContent = "Click go :]";
+    }
+}
+function Evolve() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (24 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on an Evolve Bamboo GTR 2in1.";
+    } else {
+      searchData.textContent = "Click go :]";
+    }
+}
+function OneWheel() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (19 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a OneWheel XR.";
+    } else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function MotoTec() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (22 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a MotoTec Skateboard.";
+    } else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Segway() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (10 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a Segway Ninebot S.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function SegwayPLUS() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (12 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a Segway Ninebot S-PLUS.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Razor() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (18 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a Razor Scooter.";
+    } else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function GeoBlade() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (15 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a GeoBlade 500.";
+    } else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Hovertrax() {
+  if(searchInput.value != ""){
+      var values = searchInput.value;
+      var real = (9 * values) / 60;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "You can travel " + real + " miles on a Hovertrax Hoverboard.";
+    } else{
+      searchData.textContent = "Click go :]";
+    }
+}
+</script>
+
+  <div class="container">
+    <button onclick="Walking()" id="walkbutt" type="button" class="butt">
+      Walking
+    </button>
+    <button onclick="Boosted()" id="boostbutt" type="button" class="butt">
+      Boosted Mini S Board
+    </button>
+    <button onclick="Evolve()" id="evolvbutt" type="button" class="butt">
+      Evolve Bamboo GTR 2in1
+    </button>
+    <button onclick="OneWheel()" id="onebutt" type="button" class="butt">
+      OneWheel XR
+    </button>
+    <button onclick="MotoTec()" id="motobutt" type="button" class="butt">
+      MotoTec Skateboard
+    </button>
+  </div>
+  <div class="container">
+    <button onclick="Segway()" id="segbutt" type="button" class="butt">
+      Segway Ninebot S
+    </button>
+    <button onclick="SegwayPLUS()" id="plusbutt" type="button" class="butt">
+      Segway Ninebot S-PLUS
+    </button>
+    <button onclick="Razor()" id="razorbutt" type="button" class="butt">
+      Razor Scooter
+    </button>
+    <button onclick="GeoBlade()" id="geobutt" type="button" class="butt">
+      GeoBlade 500
+    </button>
+    <button onclick="Hovertrax()" id="hoverbutt" type="button" class="butt">
+      Hovertrax Hoverboard
+    </button>
+  </div>
+
+
+  <a href="index.html"> <button type="button" class="compare">
+    go in miles </button>
+  </a>
+
+
+</body>
+
+</html>

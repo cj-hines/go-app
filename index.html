@@ -1,0 +1,386 @@
+<!-- Referenced: https://www.w3schools.com/html/html_responsive.asp-->
+<!-- Referenced: https://www.codingnepalweb.com/animated-search-box-javascript/-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <div class="search-box">
+    <input type="text" placeholder="Enter distance in miles">
+    <div class="search-icon">
+      go
+      <i class="fas fa-search"></i>
+    </div>
+<div class="cancel-icon">
+  <p id="doThis"></p>
+      <i class="fas fa-times"></i>
+    </div>
+<div class="search-data"> 
+</div>
+</div>
+
+<script>
+const searchBox = document.querySelector(".search-box");
+const searchBtn = document.querySelector(".search-icon");
+const searchInput = document.querySelector("input");
+const searchData = document.querySelector(".search-data");
+
+searchBtn.onclick =()=>{
+    searchBox.classList.add("active");
+    searchBtn.classList.add("active");
+    searchInput.classList.add("active");
+    searchInput.focus();
+    if(searchInput.value != ""){
+        var values = searchInput.value;
+        searchData.classList.remove("active");
+        searchData.innerHTML = "You are travelling " + "<span style='font-weight: 500;'>" + values + "</span>" + " miles. Pls select a valid mode of transportation (not red).";
+        if (values > 6) {
+          document.getElementById("hoverbutt").style.backgroundColor = '#5e1916';  
+          document.getElementById("hoverbutt").style.color = '#fff'; 
+          if (values > 7) {
+            document.getElementById("boostbutt").style.backgroundColor = '#5e1916';  
+            document.getElementById("boostbutt").style.color = '#fff';  
+            if (values > 8) {
+              document.getElementById("geobutt").style.backgroundColor = '#5e1916';  
+              document.getElementById("geobutt").style.color = '#fff';
+              if (values > 10) {
+              document.getElementById("motobutt").style.backgroundColor = '#5e1916';  
+              document.getElementById("motobutt").style.color = '#fff';  
+                if (values > 13) {
+                  document.getElementById("segbutt").style.backgroundColor = '#5e1916';  
+                  document.getElementById("segbutt").style.color = '#fff';
+                  if (values > 15) {
+                    document.getElementById("razorbutt").style.backgroundColor = '#5e1916';  
+                    document.getElementById("razorbutt").style.color = '#fff';
+                    if (values > 18) {
+                      document.getElementById("onebutt").style.backgroundColor = '#5e1916';  
+                      document.getElementById("onebutt").style.color = '#fff';
+                      if (values > 22) {
+                        document.getElementById("plusbutt").style.backgroundColor = '#5e1916';  
+                        document.getElementById("plusbutt").style.color = '#fff';
+                        if (values > 30) {
+                          document.getElementById("walkbutt").style.backgroundColor = '#5e1916';  
+                          document.getElementById("walkbutt").style.color = '#fff';
+                          if (values > 31) {
+                            document.getElementById("evolvbutt").style.backgroundColor = '#5e1916';  
+                            document.getElementById("evolvbutt").style.color = '#fff';
+                          } else {
+                            document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                            document.getElementById("evolvbutt").style.color = '#68b092';
+                          }
+                        } else {
+                          document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+                          document.getElementById("walkbutt").style.color = '#68b092';
+                          document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                          document.getElementById("evolvbutt").style.color = '#68b092';
+                        }
+                      } else {
+                        document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+                        document.getElementById("plusbutt").style.color = '#68b092';
+                        document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+                        document.getElementById("walkbutt").style.color = '#68b092';
+                        document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                        document.getElementById("evolvbutt").style.color = '#68b092';
+                      }
+                    } else {
+                      document.getElementById("onebutt").style.backgroundColor = '#fff';  
+                      document.getElementById("onebutt").style.color = '#68b092';
+                      document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+                      document.getElementById("plusbutt").style.color = '#68b092';
+                      document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+                      document.getElementById("walkbutt").style.color = '#68b092';
+                      document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                      document.getElementById("evolvbutt").style.color = '#68b092';
+                    }
+                  } else {
+                    document.getElementById("razorbutt").style.backgroundColor = '#fff';  
+                    document.getElementById("razorbutt").style.color = '#68b092';
+                    document.getElementById("onebutt").style.backgroundColor = '#fff';  
+                    document.getElementById("onebutt").style.color = '#68b092';
+                    document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+                    document.getElementById("plusbutt").style.color = '#68b092';
+                    document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+                    document.getElementById("walkbutt").style.color = '#68b092';
+                    document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                    document.getElementById("evolvbutt").style.color = '#68b092';
+                  }
+                } else {
+                  document.getElementById("segbutt").style.backgroundColor = '#fff';  
+                  document.getElementById("segbutt").style.color = '#68b092';
+                  document.getElementById("razorbutt").style.backgroundColor = '#fff';  
+                  document.getElementById("razorbutt").style.color = '#68b092';
+                  document.getElementById("onebutt").style.backgroundColor = '#fff';  
+                  document.getElementById("onebutt").style.color = '#68b092';
+                  document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+                  document.getElementById("plusbutt").style.color = '#68b092';
+                  document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+                  document.getElementById("walkbutt").style.color = '#68b092';
+                  document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                  document.getElementById("evolvbutt").style.color = '#68b092';
+                }
+              } else {
+                document.getElementById("motobutt").style.backgroundColor = '#fff';  
+                document.getElementById("motobutt").style.color = '#68b092';  
+                document.getElementById("segbutt").style.backgroundColor = '#fff';  
+                document.getElementById("segbutt").style.color = '#68b092';
+                document.getElementById("razorbutt").style.backgroundColor = '#fff';  
+                document.getElementById("razorbutt").style.color = '#68b092';
+                document.getElementById("onebutt").style.backgroundColor = '#fff';  
+                document.getElementById("onebutt").style.color = '#68b092';
+                document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+                document.getElementById("plusbutt").style.color = '#68b092';
+                document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+                document.getElementById("walkbutt").style.color = '#68b092';
+                document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+                document.getElementById("evolvbutt").style.color = '#68b092';
+              }
+            } else {
+              document.getElementById("geobutt").style.backgroundColor = '#fff';  
+              document.getElementById("geobutt").style.color = '#68b092';  
+              document.getElementById("motobutt").style.backgroundColor = '#fff';  
+              document.getElementById("motobutt").style.color = '#68b092';  
+              document.getElementById("segbutt").style.backgroundColor = '#fff';  
+              document.getElementById("segbutt").style.color = '#68b092';
+              document.getElementById("razorbutt").style.backgroundColor = '#fff';  
+              document.getElementById("razorbutt").style.color = '#68b092';
+              document.getElementById("onebutt").style.backgroundColor = '#fff';  
+              document.getElementById("onebutt").style.color = '#68b092';
+              document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+              document.getElementById("plusbutt").style.color = '#68b092';
+              document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+              document.getElementById("walkbutt").style.color = '#68b092';
+              document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+              document.getElementById("evolvbutt").style.color = '#68b092';
+            }
+          } else {
+            document.getElementById("boostbutt").style.backgroundColor = '#fff';  
+            document.getElementById("boostbutt").style.color = '#68b092';
+            document.getElementById("geobutt").style.backgroundColor = '#fff';  
+            document.getElementById("geobutt").style.color = '#68b092';  
+            document.getElementById("motobutt").style.backgroundColor = '#fff';  
+            document.getElementById("motobutt").style.color = '#68b092';  
+            document.getElementById("segbutt").style.backgroundColor = '#fff';  
+            document.getElementById("segbutt").style.color = '#68b092';
+            document.getElementById("razorbutt").style.backgroundColor = '#fff';  
+            document.getElementById("razorbutt").style.color = '#68b092';
+            document.getElementById("onebutt").style.backgroundColor = '#fff';  
+            document.getElementById("onebutt").style.color = '#68b092';
+            document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+            document.getElementById("plusbutt").style.color = '#68b092';
+            document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+            document.getElementById("walkbutt").style.color = '#68b092';
+            document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+            document.getElementById("evolvbutt").style.color = '#68b092';
+          }
+        } else {
+          document.getElementById("hoverbutt").style.backgroundColor = '#fff';  
+          document.getElementById("hoverbutt").style.color = '#68b092';
+          document.getElementById("boostbutt").style.backgroundColor = '#fff';  
+          document.getElementById("boostbutt").style.color = '#68b092';
+          document.getElementById("geobutt").style.backgroundColor = '#fff';  
+          document.getElementById("geobutt").style.color = '#68b092';  
+          document.getElementById("motobutt").style.backgroundColor = '#fff';  
+          document.getElementById("motobutt").style.color = '#68b092';  
+          document.getElementById("segbutt").style.backgroundColor = '#fff';  
+          document.getElementById("segbutt").style.color = '#68b092';
+          document.getElementById("razorbutt").style.backgroundColor = '#fff';  
+          document.getElementById("razorbutt").style.color = '#68b092';
+          document.getElementById("onebutt").style.backgroundColor = '#fff';  
+          document.getElementById("onebutt").style.color = '#68b092';
+          document.getElementById("plusbutt").style.backgroundColor = '#fff';  
+          document.getElementById("plusbutt").style.color = '#68b092';
+          document.getElementById("walkbutt").style.backgroundColor = '#fff';  
+          document.getElementById("walkbutt").style.color = '#68b092';
+          document.getElementById("evolvbutt").style.backgroundColor = '#fff';  
+          document.getElementById("evolvbutt").style.color = '#68b092';
+        }
+    }else{
+        searchData.textContent = "";
+    }
+}
+
+function Walking() { 
+  //3.1 MPH and 30 miles
+  if(searchInput.value != "" && searchInput.value <= 30){
+        var values = searchInput.value;
+        var real = (60 / 3.1) * values;
+        searchData.classList.remove("active");
+        searchData.innerHTML = "Your trip will take " + real + " minutes walking.";
+        document.getElementById('doThis').innerHTML = '';
+    } else if (searchInput.value > 30){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only walk 30 miles without blowing up :/";
+      //document.getElementById('doThis').innerHTML = '';
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Boosted() {
+  if(searchInput.value != ""  && searchInput.value < 8){
+      var values = searchInput.value;
+      var real = (60 / 18) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a Boosted Mini S Board.";
+    } else if (searchInput.value > 7){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only boost 7 miles. Terrible deal.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Evolve() {
+  if(searchInput.value != "" && searchInput.value <= 31){
+      var values = searchInput.value;
+      var real = (60 / 24) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on an Evolve Bamboo GTR 2in1.";
+    } else if (searchInput.value > 31){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only evolve 31 miles without blowing up.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function OneWheel() {
+  if(searchInput.value != "" && searchInput.value <= 18){
+      var values = searchInput.value;
+      var real = (60 / 19) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a OneWheel XR.";
+    } else if (searchInput.value > 18){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only onewheel 18 miles without blowing up.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function MotoTec() {
+  if(searchInput.value != "" && searchInput.value <= 10){
+      var values = searchInput.value;
+      var real = (60 / 22) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a MotoTec Skateboard.";
+    } else if (searchInput.value > 10){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only mototec 10 miles without blowing up.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Segway() {
+  if(searchInput.value != "" && searchInput.value <= 13){
+      var values = searchInput.value;
+      var real = (60 / 10) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a Segway Ninebot S.";
+    } else if (searchInput.value > 13){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only segway s 13 miles without blowing up.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function SegwayPLUS() {
+  if(searchInput.value != "" && searchInput.value <= 22){
+      var values = searchInput.value;
+      var real = (60 / 12) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a Segway Ninebot S-PLUS.";
+    } else if (searchInput.value > 22){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only segway plus 22 miles. Maybe drive...";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Razor() {
+  if(searchInput.value != "" && searchInput.value <= 15){
+      var values = searchInput.value;
+      var real = (60 / 18) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a Razor Scooter.";
+    } else if (searchInput.value > 15){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only razor 15 miles without blowing up.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function GeoBlade() {
+  if(searchInput.value != "" && searchInput.value <= 8){
+      var values = searchInput.value;
+      var real = (60 / 15) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a GeoBlade 500.";
+    } else if (searchInput.value > 8){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance out of range D: you can only geoblade 8 miles without blowing up";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+function Hovertrax() {
+  if(searchInput.value != "" && searchInput.value <= 6){
+      var values = searchInput.value;
+      var real = (60 / 9) * values;
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Your trip will take " + real + " minutes on a Hovertrax Hoverboard.";
+    } else if (searchInput.value > 6){
+      searchData.classList.remove("active");
+      searchData.innerHTML = "Distance is out of range. You can only hovertrax 6 miles... lmao just walk.";
+    }else{
+      searchData.textContent = "Click go :]";
+    }
+}
+
+
+
+</script>
+
+  <div class="container">
+    <button onclick="Walking()" id="walkbutt" type="button" class="butt">
+      Walking
+    </button>
+    <button onclick="Boosted()" id="boostbutt" type="button" class="butt">
+      Boosted Mini S Board
+    </button>
+    <button onclick="Evolve()" id="evolvbutt" type="button" class="butt">
+      Evolve Bamboo GTR 2in1
+    </button>
+    <button onclick="OneWheel()" id="onebutt" type="button" class="butt">
+      OneWheel XR
+    </button>
+    <button onclick="MotoTec()" id="motobutt" type="button" class="butt">
+      MotoTec Skateboard
+    </button>
+  </div>
+  <div class="container">
+    <button onclick="Segway()" id="segbutt" type="button" class="butt">
+      Segway Ninebot S
+    </button>
+    <button onclick="SegwayPLUS()" id="plusbutt" type="button" class="butt">
+      Segway Ninebot S-PLUS
+    </button>
+    <button onclick="Razor()" id="razorbutt" type="button" class="butt">
+      Razor Scooter
+    </button>
+    <button onclick="GeoBlade()" id="geobutt" type="button" class="butt">
+      GeoBlade 500
+    </button>
+    <button onclick="Hovertrax()" id="hoverbutt" type="button" class="butt">
+      Hovertrax Hoverboard
+    </button>
+  </div>
+
+
+  <a href="other.html"> <button type="button" class="compare">
+    go in minutes </button>
+  </a>
+
+
+</body>
+
+</html>
